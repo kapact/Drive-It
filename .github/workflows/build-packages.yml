@@ -25,10 +25,15 @@ jobs:
           distribution: 'temurin'
 
       - name: Setup Gradle
-        uses: gradle/gradle-build-action@v2
+        uses: gradle/gradle-build-action@v3
+
+      - name: Make gradlew executable
+        run: chmod +x gradlew
+        shell: bash
 
       - name: Build Windows MSI
-        run: ./gradlew packageMsi
+        run: ./gradlew packageMsi --no-daemon --stacktrace
+        shell: bash
 
       - name: Upload Windows MSI
         uses: actions/upload-artifact@v4
@@ -52,10 +57,13 @@ jobs:
           distribution: 'temurin'
 
       - name: Setup Gradle
-        uses: gradle/gradle-build-action@v2
+        uses: gradle/gradle-build-action@v3
+
+      - name: Make gradlew executable
+        run: chmod +x gradlew
 
       - name: Build macOS DMG
-        run: ./gradlew packageDmg
+        run: ./gradlew packageDmg --no-daemon --stacktrace
 
       - name: Upload macOS DMG
         uses: actions/upload-artifact@v4
@@ -79,10 +87,13 @@ jobs:
           distribution: 'temurin'
 
       - name: Setup Gradle
-        uses: gradle/gradle-build-action@v2
+        uses: gradle/gradle-build-action@v3
+
+      - name: Make gradlew executable
+        run: chmod +x gradlew
 
       - name: Build Linux DEB
-        run: ./gradlew packageDeb
+        run: ./gradlew packageDeb --no-daemon --stacktrace
 
       - name: Upload Linux DEB
         uses: actions/upload-artifact@v4
