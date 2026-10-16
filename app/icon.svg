@@ -1,0 +1,25 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366F1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="240" fill="url(#grad)"/>
+
+  <!-- Cloud shape -->
+  <path d="M 180 280 Q 160 280 160 260 Q 160 240 180 240 Q 180 210 210 210 Q 230 210 240 225 Q 250 210 270 210 Q 300 210 300 240 Q 320 240 320 260 Q 320 280 300 280 Z" fill="white" opacity="0.9"/>
+
+  <!-- Upload arrow -->
+  <g transform="translate(256, 320)">
+    <!-- Arrow shaft -->
+    <rect x="-15" y="-80" width="30" height="100" fill="white" rx="5"/>
+    <!-- Arrow head -->
+    <path d="M 0,-100 L -40,-60 L -20,-60 L -20,-80 L 20,-80 L 20,-60 L 40,-60 Z" fill="white"/>
+  </g>
+
+  <!-- Folder base (subtle) -->
+  <path d="M 160 340 L 160 380 Q 160 390 170 390 L 342 390 Q 352 390 352 380 L 352 340 Z" fill="white" opacity="0.3"/>
+</svg>
