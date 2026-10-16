@@ -17,7 +17,7 @@ local.properties
 # OAuth Credentials - DO NOT COMMIT
 app/credentials/credentials.json
 app/credentials/StoredCredential
-app/src/main/resources/credentials.json
+# NOTE: app/src/main/resources/credentials.json IS committed (bundled in app for distribution)
 .driveit/
 ~/.driveit/
 
